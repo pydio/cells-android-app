@@ -1,0 +1,230 @@
+buildscript {
+
+    // Define the version of the libraries that we use.
+    // Rather implement a BOM mechanism that also takes care of having the java-sdk locally or not.
+    ext {
+        // Global variables: build plugins
+        kotlin_version = '1.6.20'
+        gradle_build_tools_version = '7.1.1'
+        safe_args_plugin_version = '2.4.1'
+
+        // Local variables (use def)
+        def lifecycle_version = '2.4.1'
+        def coroutines_android_version = '1.6.0'
+        def room_version = '2.4.2'
+        def work_version = '2.7.1'
+
+        def androidx_core_version = '1.7.0'
+        def appcompat_version = '1.4.1'
+        def preference_version = '1.2.0'
+        def navigation_version = '2.4.1'
+        def constraint_layout_version = '2.1.3'
+        def swipe_refresh_layout_version = '1.1.0'
+        def recyclerview_selection_version = '1.1.0'
+        def splash_version = '1.0.0-beta02'
+
+        def koin_version = '3.2.0-beta-1'
+
+        def material_version = '1.5.0'
+
+        // Define All non-android Third Party versions in a single place
+        def aws_s3_sdk_version = '2.43.0'
+        def glide_version = '4.13.1'
+        def gson_version = '2.9.0'
+        def commons_codec_version = '1.15'
+
+        // Test libraries
+        def androidx_test_version = '1.4.0'
+        def androidx_test_ext_version = '1.1.3'
+        def espresso_version = '3.4.0'
+
+        def junit_version = '4.13.2'
+        def truth_version = '1.1.3'
+        def robolectric_version = '4.5.1'
+
+        // Define dependency packages that are then used as shortcuts by the various modules.
+
+        libraries = [
+                // Kotlin standard library and coroutines
+                "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+                "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_android_version",
+                "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_android_version",
+
+                // Android UI and appcompat
+                "androidx.core:core:$androidx_core_version",
+                "androidx.appcompat:appcompat:$appcompat_version",
+                // Navigation UI
+                "androidx.navigation:navigation-fragment-ktx:$navigation_version",
+                "androidx.navigation:navigation-ui-ktx:$navigation_version",
+                "androidx.navigation:navigation-dynamic-features-fragment:$navigation_version",
+                // ViewModel and LiveData
+                "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version",
+                "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version",
+                // Preferences library
+                "androidx.preference:preference:$preference_version",
+                // Extended UI features
+                "androidx.recyclerview:recyclerview-selection:$recyclerview_selection_version",
+                "androidx.constraintlayout:constraintlayout:$constraint_layout_version",
+                "androidx.swiperefreshlayout:swiperefreshlayout:$swipe_refresh_layout_version",
+                "androidx.core:core-splashscreen:$splash_version",
+
+                // Material UI
+                "com.google.android.material:material:$material_version",
+
+                // Room for database, work for background
+                "androidx.room:room-ktx:$room_version",
+                "androidx.work:work-runtime-ktx:$work_version",
+
+                // Dependency injection with Koin https://insert-koin.io/
+                "io.insert-koin:koin-core:$koin_version",
+                // Koin main features for Android
+                "io.insert-koin:koin-android:$koin_version",
+                // Jetpack WorkManager
+                "io.insert-koin:koin-androidx-workmanager:$koin_version",
+                // Navigation Graph
+                "io.insert-koin:koin-androidx-navigation:$koin_version",
+
+                // Files
+                "com.amazonaws:aws-android-sdk-s3:$aws_s3_sdk_version",
+                "com.github.bumptech.glide:glide:$glide_version",
+
+                // Utils
+                "commons-codec:commons-codec:$commons_codec_version",
+                "com.google.code.gson:gson:$gson_version",
+        ]
+
+        librariesKapt = [
+                "androidx.room:room-compiler:$room_version",
+                "com.github.bumptech.glide:compiler:$glide_version",
+        ]
+
+        testLibraries = [
+
+                // Core
+                "junit:junit:$junit_version",
+                "com.google.truth:truth:$truth_version",
+                "androidx.arch.core:core-testing:2.1.0",
+
+                // Coroutines testing
+                "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_android_version",
+
+                // Koin for Test + JUnit 4
+                "io.insert-koin:koin-test:$koin_version",
+                "io.insert-koin:koin-test-junit4:$koin_version",
+
+                // Mocks
+                "org.mockito:mockito-core:3.12.4",
+        ]
+
+        androidTestLibraries = [
+                "androidx.test:runner:$androidx_test_version",
+                "androidx.test:rules:$androidx_test_version",
+                "androidx.test.ext:junit:$androidx_test_ext_version",
+
+                // Espresso
+                "androidx.test.espresso:espresso-core:$espresso_version",
+                "androidx.test.espresso:espresso-contrib:$espresso_version",
+                "androidx.test.espresso:espresso-intents:$espresso_version",
+
+                //  Architecture Components testing libraries
+                "androidx.work:work-testing:$work_version",
+
+                // Coroutines testing
+                "org.robolectric:robolectric:$robolectric_version",
+        ]
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradle_build_tools_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$safe_args_plugin_version"
+    }
+}
+
+plugins {
+    // Publish the generated resources as Maven Artifacts.
+    id 'maven-publish'
+}
+
+// Retrieve local context
+def localProperties = new Properties()
+localProperties.load(new FileInputStream(rootProject.file("local.properties")))
+retrieveFromEnv(localProperties) // There must be a more elegant way to do this...
+
+def versionProperties = new Properties()
+versionProperties.load(new FileInputStream(rootProject.file("versions.properties")))
+
+// Manage optional local sdk-java submodule
+def sdkJavaCheck = new File('sdk-java/sdk-java.gradle')
+
+// Expose custom properties to all modules in the project.
+ext {
+    githubUrl = 'https://github.com/pydio/cells-android-app.git'
+
+    // Expose properties retrieved from files to child projects
+    configs = localProperties
+    ownVersions = versionProperties
+
+    // Shortcut to enable building the Android layers without checking out the sdk-java repository
+    useLocalSdkJava = sdkJavaCheck.exists()
+}
+
+allprojects {
+    repositories {
+        mavenLocal()
+        google()
+        mavenCentral()
+    }
+}
+
+/* Factorise some of the methods used in various sub projects */
+// Pre-create generic common pom configuration:
+ext.getBasePom = { repoURL ->
+    return {
+        licenses {
+            license {
+                name "The GNU Lesser General Public License, Version 3.0"
+                url "http://www.gnu.org/licenses/lgpl-3.0.txt"
+                distribution "repo"
+            }
+        }
+
+        developers {
+            developer {
+                id "bsinou"
+                name "Bruno Sinou"
+                email "bruno.sinou@posteo.de"
+            }
+        }
+
+        scm {
+            url repoURL
+        }
+    }
+}
+
+// Override local.properties sensitive values with environment parameter
+def static retrieveFromEnv(Properties props) {
+
+    def tmpValue = System.getenv('ANDROID_KEYSTORE_PATH')
+    if (tmpValue != null) {
+        props['keystore.path'] = tmpValue
+    }
+    tmpValue = System.getenv('ANDROID_KEYSTORE_PWD')
+    if (tmpValue != null) {
+        props['keystore.pwd'] = tmpValue
+    }
+    tmpValue = System.getenv('ANDROID_SIGNKEY_ALIAS')
+    if (tmpValue != null) {
+        props['signkey.alias'] = tmpValue
+    }
+    tmpValue = System.getenv('ANDROID_SIGNKEY_PWD')
+    if (tmpValue != null) {
+        props['signkey.pwd'] = tmpValue
+    }
+}
