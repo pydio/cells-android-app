@@ -200,6 +200,12 @@ ext.getBasePom = { repoURL ->
                 name "Bruno Sinou"
                 email "bruno.sinou@posteo.de"
             }
+
+            developer {
+                id "cdujeu"
+                name "Charles du Jeu"
+                email "charles@ajaxplorer.info"
+            }
         }
 
         scm {
