@@ -126,10 +126,14 @@ buildscript {
                 "androidx.test:rules:$androidx_test_version",
                 "androidx.test.ext:junit:$androidx_test_ext_version",
 
+                "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_android_version",
+
                 // Espresso
                 "androidx.test.espresso:espresso-core:$espresso_version",
                 "androidx.test.espresso:espresso-contrib:$espresso_version",
                 "androidx.test.espresso:espresso-intents:$espresso_version",
+
+                "androidx.arch.core:core-testing:2.1.0",
 
                 //  Architecture Components testing libraries
                 "androidx.work:work-testing:$work_version",
