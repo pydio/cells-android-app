@@ -36,6 +36,8 @@ buildscript {
         def junit_version = '4.13.2'
         def truth_version = '1.1.3'
         def robolectric_version = '4.5.1'
+        def mockito_version = '3.12.4'
+        def androidx_core_testing_version = '2.1.0'
         def androidx_test_version = '1.4.0'
         def androidx_test_ext_version = '1.1.3'
         def espresso_version = '3.4.0'
@@ -115,9 +117,9 @@ buildscript {
                 "io.insert-koin:koin-test-junit4:$koin_version",
 
                 // Mocks
-                "org.mockito:mockito-core:3.12.4",
+                "org.mockito:mockito-core:$mockito_version",
 
-                "androidx.arch.core:core-testing:2.1.0",
+                "androidx.arch.core:core-testing:$androidx_core_testing_version",
         ]
 
         androidTestLibraries = [
@@ -126,10 +128,14 @@ buildscript {
                 "io.insert-koin:koin-test:$koin_version",
                 "io.insert-koin:koin-test-junit4:$koin_version",
 
+                //  Androidx Testing
+                "androidx.arch.core:core-testing:$androidx_core_testing_version",
                 "androidx.test:runner:$androidx_test_version",
                 "androidx.test:rules:$androidx_test_version",
                 "androidx.test.ext:junit:$androidx_test_ext_version",
+                "androidx.work:work-testing:$work_version",
 
+                // Coroutines testing
                 "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_android_version",
 
                 // Espresso
@@ -137,12 +143,8 @@ buildscript {
                 "androidx.test.espresso:espresso-contrib:$espresso_version",
                 "androidx.test.espresso:espresso-intents:$espresso_version",
 
-                "androidx.arch.core:core-testing:2.1.0",
 
-                //  Architecture Components testing libraries
-                "androidx.work:work-testing:$work_version",
 
-                // Coroutines testing
                 "org.robolectric:robolectric:$robolectric_version",
         ]
     }
