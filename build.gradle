@@ -4,7 +4,7 @@ buildscript {
     // Rather implement a BOM mechanism that also takes care of having the java-sdk locally or not.
     ext {
         // Global variables: build plugins
-        kotlin_version = '1.6.21'
+        kotlin_version = '1.7.0'
         gradle_build_tools_version = '7.2.0'
         safe_args_plugin_version = '2.4.1'
 
@@ -27,6 +27,9 @@ buildscript {
 
         // Define All non-Android Third Party versions in a single place
         def koin_version = '3.2.0'
+        def rx_java_version = '3.1.5'
+        def rx_android_version = '3.0.0'
+
         def aws_s3_sdk_version = '2.48.1'
         def glide_version = '4.13.2'
         def gson_version = '2.9.0'
@@ -43,7 +46,14 @@ buildscript {
         def espresso_version = '3.4.0'
 
         // Define dependency packages that are then used as shortcuts by the various modules.
+        librariesKapt = [
+                "androidx.room:room-compiler:$room_version",
+                "com.github.bumptech.glide:compiler:$glide_version",
+        ]
 
+        processors = [
+                "com.github.bumptech.glide:compiler:$glide_version",
+        ]
         libraries = [
                 // Kotlin standard library and coroutines
                 "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
@@ -84,6 +94,10 @@ buildscript {
                 // Navigation Graph
                 "io.insert-koin:koin-androidx-navigation:$koin_version",
 
+                // RxJava 3: reactive and observable custom objects 
+                "io.reactivex.rxjava3:rxjava:$rx_java_version",
+                "io.reactivex.rxjava3:rxandroid:$rx_android_version",
+
                 // Files
                 "com.amazonaws:aws-android-sdk-s3:$aws_s3_sdk_version",
                 "com.github.bumptech.glide:glide:$glide_version",
@@ -91,15 +105,6 @@ buildscript {
                 // Utils
                 "commons-codec:commons-codec:$commons_codec_version",
                 "com.google.code.gson:gson:$gson_version",
-        ]
-
-        librariesKapt = [
-                "androidx.room:room-compiler:$room_version",
-                "com.github.bumptech.glide:compiler:$glide_version",
-        ]
-
-        processors = [
-                "com.github.bumptech.glide:compiler:$glide_version",
         ]
 
         testLibraries = [
@@ -142,8 +147,6 @@ buildscript {
                 "androidx.test.espresso:espresso-core:$espresso_version",
                 "androidx.test.espresso:espresso-contrib:$espresso_version",
                 "androidx.test.espresso:espresso-intents:$espresso_version",
-
-
 
                 "org.robolectric:robolectric:$robolectric_version",
         ]
