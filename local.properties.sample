@@ -1,0 +1,15 @@
+## This file contains expected configuration that must be exposed in your
+## 'local.properties' file and *MUST NOT* be checked-in into your Version Control System:
+## it contains sensitive information specific to your setup.
+
+## Simply copy paste as "local.properties" file and adapt.
+
+# Only necessary property to build, usually set by Android Studio when opening the project
+sdk.dir=/path/to/your/android/base/dir
+
+# Quick and dirty shortcut to store packaging and signing information (optional)
+keystore.path=<path to your local java Keystore>
+signkey.alias=<alias of the signing key>
+##### SENSITIVE INFORMATION: PAY EXTRA ATTENTION #######
+keystore.pwd=<put your keystore>
+signkey.pwd=<put your signing key>
