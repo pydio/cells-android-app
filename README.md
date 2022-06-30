@@ -10,7 +10,7 @@ It provides a vanilla packaging of necessary modules to simply clone and build t
 in Android Studio.
 
 If you are a user, rather refer to
-the [main Android Client repository](https://github.com/pydio/cells-android-app.git) or directly to
+the [main Android Client repository](https://github.com/pydio/cells-android-client) or directly to
 the [application page on the Google Play store](https://play.google.com/store/apps/details?id=com.pydio.android.Client)
 
 > Note: this application is **useless if you have no access to any Pydio server**. If you don't know us, [discover what we do](https://pydio.com)!
