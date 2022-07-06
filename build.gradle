@@ -9,15 +9,15 @@ buildscript {
         safe_args_plugin_version = '2.4.1'
 
         // Local variables (use def)
-        def lifecycle_version = '2.4.1'
-        def coroutines_android_version = '1.6.2'
+        def lifecycle_version = '2.5.0'
+        def coroutines_android_version = '1.6.3'
         def room_version = '2.4.2'
         def work_version = '2.7.1'
 
         def appcompat_version = '1.4.2'
         def androidx_core_version = '1.8.0'
         def preference_version = '1.2.0'
-        def navigation_version = '2.4.2'
+        def navigation_version = '2.5.0'
         def constraint_layout_version = '2.1.4'
         def swipe_refresh_layout_version = '1.1.0'
         def recyclerview_selection_version = '1.1.0'
@@ -30,7 +30,7 @@ buildscript {
         def rx_java_version = '3.1.5'
         def rx_android_version = '3.0.0'
 
-        def aws_s3_sdk_version = '2.48.1'
+        def aws_s3_sdk_version = '2.49.0'
         def glide_version = '4.13.2'
         def gson_version = '2.9.0'
         def commons_codec_version = '1.15'
