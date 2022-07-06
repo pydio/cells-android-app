@@ -1,7 +1,7 @@
 # Cells Android Application
 
 The Cells application for Android is a light client for the [Pydio Cells](https://pydio.com)
-server that provides basic features to simply access and manage your files on your Android device.
+server that provides basic features to simply access and manage your files on your Android device.  
 It supports both Cells (v2 to v4) and the legacy Pydio PHP (Pydio 6, 7, 8, 9) servers.  
 We also support Android devices until Lollipop (Android 5, API 21).
 
@@ -13,7 +13,8 @@ If you are a user, rather refer to
 the [main Android Client repository](https://github.com/pydio/cells-android-client) or directly to
 the [application page on the Google Play store](https://play.google.com/store/apps/details?id=com.pydio.android.Client)
 
-> Note: this application is **useless if you have no access to any Pydio server**. If you don't know us, [discover what we do](https://pydio.com)!
+> Note: this application is **useless if you have no access to any Pydio server**.  
+> If you don't know us, [discover what we do](https://pydio.com)!
 
 ## Set-up development environment
 
