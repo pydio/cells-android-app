@@ -4,8 +4,8 @@ buildscript {
     // Rather implement a BOM mechanism that also takes care of having the java-sdk locally or not.
     ext {
         // Global variables: build plugins
-        kotlin_version = '1.7.10'
-        gradle_build_tools_version = '7.2.1'
+        kotlin_version = '1.7.20'
+        gradle_build_tools_version = '7.3.0'
         safe_args_plugin_version = '2.4.1'
 
         // Local variables (use def)
@@ -14,24 +14,25 @@ buildscript {
         def room_version = '2.4.3'
         def work_version = '2.7.1'
 
-        def appcompat_version = '1.5.0'
-        def androidx_core_version = '1.8.0'
+        def appcompat_version = '1.5.1'
+        def androidx_core_version = '1.9.0'
         def preference_version = '1.2.0'
-        def navigation_version = '2.5.0'
+        def navigation_version = '2.5.2'
         def constraint_layout_version = '2.1.4'
         def swipe_refresh_layout_version = '1.1.0'
         def recyclerview_selection_version = '1.1.0'
         def splash_version = '1.0.0'
 
-        def material_version = '1.6.1'
+        def material_version = '1.7.0'
 
         // Define All non-Android Third Party versions in a single place
-        def koin_version = '3.2.0'
+        def koin_version = '3.2.2'
+        def koin_android_version = '3.3.0'
         def rx_java_version = '3.1.5'
         def rx_android_version = '3.0.0'
 
-        def aws_s3_sdk_version = '2.51.0'
-        def glide_version = '4.13.2'
+        def aws_s3_sdk_version = '2.55.0'
+        def glide_version = '4.14.2'
         def zxing_version = '3.5.0'
         def gson_version = '2.9.1'
         def commons_codec_version = '1.15'
@@ -89,11 +90,11 @@ buildscript {
                 // Dependency injection with Koin https://insert-koin.io/
                 "io.insert-koin:koin-core:$koin_version",
                 // Koin main features for Android
-                "io.insert-koin:koin-android:$koin_version",
+                "io.insert-koin:koin-android:$koin_android_version",
                 // Jetpack WorkManager
-                "io.insert-koin:koin-androidx-workmanager:$koin_version",
+                "io.insert-koin:koin-androidx-workmanager:$koin_android_version",
                 // Navigation Graph
-                "io.insert-koin:koin-androidx-navigation:$koin_version",
+                "io.insert-koin:koin-androidx-navigation:$koin_android_version",
 
                 // RxJava 3: reactive and observable custom objects 
                 "io.reactivex.rxjava3:rxjava:$rx_java_version",
