@@ -11,10 +11,10 @@ buildscript {
         // Local variables (use def)
         def lifecycle_version = '2.5.1'
         def coroutines_android_version = '1.6.4'
-        def room_version = '2.4.3'
+        def room_version = '2.5.0'
         def work_version = '2.7.1'
 
-        def appcompat_version = '1.5.1'
+        def appcompat_version = '1.6.0'
         def androidx_core_version = '1.9.0'
         def preference_version = '1.2.0'
         def navigation_version = '2.5.3'
@@ -43,9 +43,9 @@ buildscript {
         def robolectric_version = '4.5.1'
         def mockito_version = '3.12.4'
         def androidx_core_testing_version = '2.1.0'
-        def androidx_test_version = '1.5.0'
-        def androidx_test_ext_version = '1.1.4'
-        def espresso_version = '3.5.0'
+        def androidx_test_version = '1.5.2'
+        def androidx_test_ext_version = '1.1.5'
+        def espresso_version = '3.5.1'
 
         // Define dependency packages that are then used as shortcuts by the various modules.
         librariesKapt = [
