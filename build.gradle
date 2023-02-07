@@ -4,7 +4,7 @@ buildscript {
     // Rather implement a BOM mechanism that also takes care of having the java-sdk locally or not.
     ext {
         // Global variables: build plugins
-        kotlin_version = '1.7.21'
+        kotlin_version = '1.7.20'
         gradle_build_tools_version = '7.3.1'
         safe_args_plugin_version = '2.4.1'
 
@@ -25,9 +25,8 @@ buildscript {
 
         def material_version = '1.8.0'
 
-        // Compose versions
-        def accompanist_version = '0.28.0'
-
+        // Compose versions is defined via platform BOM
+        // def accompanist_version = '0.28.0'
 
         // Define All non-Android Third Party versions in a single place
         def koin_version = '3.3.2'
@@ -47,7 +46,7 @@ buildscript {
         def robolectric_version = '4.9.2'
         def mockito_version = '5.1.1'
         def androidx_core_testing_version = '2.1.0'
-        def androidx_test_version = '1.5.2'
+        def androidx_test_version = '1.5.0'
         def androidx_test_ext_version = '1.1.5'
         def espresso_version = '3.5.1'
 
