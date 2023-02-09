@@ -122,9 +122,17 @@ buildscript {
                 "androidx.compose.foundation:foundation",
                 "androidx.compose.foundation:foundation-layout",
                 "androidx.compose.material:material",
-                "androidx.compose.material3:material3",
                 "androidx.compose.runtime:runtime-livedata",
                 "androidx.compose.ui:ui-tooling",
+                "androidx.compose.material3:material3",
+                // This library is also provided as an API dependency by androidx.compose.material:material.
+                // We specify it explicitly so that we won't break when we finally remove material lib from
+                // the explicit dependency tree
+                "androidx.compose.material:material-icons-core",
+                // this separate library, the full set of Material icons. Due to the very large size of this lib,
+                // TODO make sure to use R8/Proguard to strip unused icons when including this as a direct dependency.
+                // See https://developer.android.com/reference/kotlin/androidx/compose/material/icons/package-summary
+                "androidx.compose.material:material-icons-extended",
                 // this enable cohabitation of old and new theme for compose, 
                 // See e.g: https://developer.android.com/codelabs/jetpack-compose-migration?hl=en#10
                 // "com.google.accompanist:accompanist-themeadapter-material:$accompanist_version",
