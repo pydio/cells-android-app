@@ -26,6 +26,10 @@ buildscript {
         def material_version = '1.8.0'
 
         // Compose versions is defined via platform BOM
+        // We define here the versions of a few extra libraries that extend the Jetpack Compose features
+        def compose_nav_version = '2.5.3'
+        def compose_koin_version = '3.4.2'
+        def compose_glide_version = '1.0.0-alpha.1'
         // See ReadMe from accompanist: bumping its version affect all compose platform packages
         // def accompanist_version = '0.29.1-alpha'
         def accompanist_version = '0.28.0'
@@ -116,8 +120,8 @@ buildscript {
                 "com.google.zxing:core:$zxing_version",
         ]
 
-
-        // We rely on a BOM to provide correct version of the libraries, see cells-client gradle config
+        // We rely on a BOM to provide correct versions of the Jetpack Compose libraries.
+        // See cells-client gradle config
         composeLibraries = [
                 "androidx.compose.runtime:runtime",
                 "androidx.compose.ui:ui",
@@ -128,6 +132,7 @@ buildscript {
                 "androidx.compose.runtime:runtime-livedata",
                 "androidx.compose.ui:ui-tooling",
                 "androidx.compose.material3:material3",
+                "androidx.compose.material3:material3-window-size-class",
                 // This library is also provided as an API dependency by androidx.compose.material:material.
                 // We specify it explicitly so that we won't break when we finally remove material lib from
                 // the explicit dependency tree
@@ -136,7 +141,12 @@ buildscript {
                 // TODO make sure to use R8/Proguard to strip unused icons when including this as a direct dependency.
                 // See https://developer.android.com/reference/kotlin/androidx/compose/material/icons/package-summary
                 "androidx.compose.material:material-icons-extended",
-                // this enable cohabitation of old and new theme for compose, 
+
+                // Include extensions the permits integration of Compose with extra TP libraries
+                "androidx.navigation:navigation-compose:$compose_nav_version",
+                "io.insert-koin:koin-androidx-compose:$compose_koin_version",
+                "com.github.bumptech.glide:compose:$compose_glide_version",
+                // this enable cohabitation of old and new theme for compose,
                 // See e.g: https://developer.android.com/codelabs/jetpack-compose-migration?hl=en#10
                 // "com.google.accompanist:accompanist-themeadapter-material:$accompanist_version",
                 // It also provides the basis for the carousel
