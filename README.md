@@ -7,7 +7,7 @@ We also support Android devices back until Lollipop (Android 5, API 21).
 
 Current repository is intended for **developers** and/or hackers.  
 It provides a vanilla packaging of necessary modules to simply clone and build the application, e.g
-in Android Studio.
+in Android Studio Electric Eel (2022.1).
 
 If you are a user, rather refer to
 the [main Android Client repository](https://github.com/pydio/cells-android-client) or directly to

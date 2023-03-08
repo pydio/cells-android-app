@@ -4,8 +4,8 @@ buildscript {
     // Rather implement a BOM mechanism that also takes care of having the java-sdk locally or not.
     ext {
         // Global variables: build plugins
-        kotlin_version = '1.7.20'
-        gradle_build_tools_version = '7.3.1'
+        kotlin_version = '1.8.10'
+        gradle_build_tools_version = '7.4.2'
         safe_args_plugin_version = '2.4.1'
 
         // Local variables (use def)
@@ -18,9 +18,9 @@ buildscript {
         def androidx_core_version = '1.9.0'
         def preference_version = '1.2.0'
         def navigation_version = '2.5.3'
-        def constraint_layout_version = '2.1.4'
-        def swipe_refresh_layout_version = '1.1.0'
-        def recyclerview_selection_version = '1.1.0'
+//        def constraint_layout_version = '2.1.4'
+//        def swipe_refresh_layout_version = '1.1.0'
+//        def recyclerview_selection_version = '1.1.0'
         def splash_version = '1.0.0'
 
         def material_version = '1.8.0'
@@ -36,7 +36,7 @@ buildscript {
 
         // Define All non-Android Third Party versions in a single place
         def koin_version = '3.3.2'
-        def koin_android_version = '3.3.2'
+        def koin_android_version = '3.3.3'
         def rx_java_version = '3.1.6'
         def rx_android_version = '3.0.2'
 
@@ -52,7 +52,7 @@ buildscript {
         def robolectric_version = '4.9.2'
         def mockito_version = '5.1.1'
         def androidx_core_testing_version = '2.1.0'
-        def androidx_test_version = '1.5.0'
+        def androidx_test_version = '1.5.2u'
         def androidx_test_ext_version = '1.1.5'
         def espresso_version = '3.5.1'
 
@@ -75,18 +75,18 @@ buildscript {
                 "androidx.core:core:$androidx_core_version",
                 "androidx.appcompat:appcompat:$appcompat_version",
                 // Navigation UI
-                "androidx.navigation:navigation-fragment-ktx:$navigation_version",
+//                "androidx.navigation:navigation-fragment-ktx:$navigation_version",
                 "androidx.navigation:navigation-ui-ktx:$navigation_version",
-                "androidx.navigation:navigation-dynamic-features-fragment:$navigation_version",
+//                "androidx.navigation:navigation-dynamic-features-fragment:$navigation_version",
                 // ViewModel and LiveData
                 "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version",
                 "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version",
                 // Preferences library
                 "androidx.preference:preference:$preference_version",
                 // Extended UI features
-                "androidx.recyclerview:recyclerview-selection:$recyclerview_selection_version",
-                "androidx.constraintlayout:constraintlayout:$constraint_layout_version",
-                "androidx.swiperefreshlayout:swiperefreshlayout:$swipe_refresh_layout_version",
+//                "androidx.recyclerview:recyclerview-selection:$recyclerview_selection_version",
+//                "androidx.constraintlayout:constraintlayout:$constraint_layout_version",
+//                "androidx.swiperefreshlayout:swiperefreshlayout:$swipe_refresh_layout_version",
                 "androidx.core:core-splashscreen:$splash_version",
 
                 // Material UI
