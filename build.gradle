@@ -139,7 +139,7 @@ buildscript {
                 // the explicit dependency tree
                 "androidx.compose.material:material-icons-core",
                 // this separate library, the full set of Material icons. Due to the very large size of this lib,
-                // TODO make sure to use R8/Proguard to strip unused icons when including this as a direct dependency.
+                // Make sure to use R8/Proguard to strip unused icons when including this as a direct dependency.
                 // See https://developer.android.com/reference/kotlin/androidx/compose/material/icons/package-summary
                 "androidx.compose.material:material-icons-extended",
 
