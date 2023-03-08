@@ -6,7 +6,6 @@ buildscript {
         // Global variables: build plugins
         kotlin_version = '1.8.10'
         gradle_build_tools_version = '7.4.2'
-        safe_args_plugin_version = '2.4.1'
 
         // Local variables (use def)
         def lifecycle_version = '2.5.1'
@@ -207,7 +206,7 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:$gradle_build_tools_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$safe_args_plugin_version"
+//        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$safe_args_plugin_version"
     }
 }
 
