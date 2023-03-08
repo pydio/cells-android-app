@@ -12,9 +12,9 @@ buildscript {
         def lifecycle_version = '2.5.1'
         def coroutines_android_version = '1.6.4'
         def room_version = '2.5.0'
-        def work_version = '2.7.1'
+        def work_version = '2.8.0'
 
-        def appcompat_version = '1.6.0'
+        def appcompat_version = '1.6.1'
         def androidx_core_version = '1.9.0'
         def preference_version = '1.2.0'
         def navigation_version = '2.5.3'
@@ -29,19 +29,19 @@ buildscript {
         // We define here the versions of a few extra libraries that extend the Jetpack Compose features
         def compose_nav_version = '2.5.3'
         def compose_koin_version = '3.4.2'
-        def compose_glide_version = '1.0.0-alpha.1'
+        def compose_glide_version = '1.0.0-alpha.2'
         // See ReadMe from accompanist: bumping its version affect all compose platform packages
         // def accompanist_version = '0.29.1-alpha'
         def accompanist_version = '0.28.0'
 
         // Define All non-Android Third Party versions in a single place
-        def koin_version = '3.3.2'
+        def koin_version = '3.3.3'
         def koin_android_version = '3.3.3'
         def rx_java_version = '3.1.6'
         def rx_android_version = '3.0.2'
 
-        def aws_s3_sdk_version = '2.60.0'
-        def glide_version = '4.14.2'
+        def aws_s3_sdk_version = '2.64.0'
+        def glide_version = '4.15.0'
         def zxing_version = '3.5.1'
         def gson_version = '2.10.1'
         def commons_codec_version = '1.15'
@@ -51,8 +51,9 @@ buildscript {
         def truth_version = '1.1.3'
         def robolectric_version = '4.9.2'
         def mockito_version = '5.1.1'
-        def androidx_core_testing_version = '2.1.0'
-        def androidx_test_version = '1.5.2'
+        def androidx_core_testing_version = '2.2.0'
+        def androidx_test_version = '1.5.0'
+        def androidx_test_runner_version = '1.5.2'
         def androidx_test_ext_version = '1.1.5'
         def espresso_version = '3.5.1'
 
@@ -181,7 +182,7 @@ buildscript {
 
                 //  Androidx Testing
                 "androidx.arch.core:core-testing:$androidx_core_testing_version",
-                "androidx.test:runner:$androidx_test_version",
+                "androidx.test:runner:$androidx_test_runner_version",
                 "androidx.test:rules:$androidx_test_version",
                 "androidx.test.ext:junit:$androidx_test_ext_version",
                 "androidx.work:work-testing:$work_version",
