@@ -52,7 +52,7 @@ buildscript {
         def robolectric_version = '4.9.2'
         def mockito_version = '5.1.1'
         def androidx_core_testing_version = '2.1.0'
-        def androidx_test_version = '1.5.2u'
+        def androidx_test_version = '1.5.2'
         def androidx_test_ext_version = '1.1.5'
         def espresso_version = '3.5.1'
 
