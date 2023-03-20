@@ -28,7 +28,7 @@ buildscript {
         // We define here the versions of a few extra libraries that extend the Jetpack Compose features
         def compose_nav_version = '2.5.3'
         def compose_koin_version = '3.4.2'
-        def compose_glide_version = '1.0.0-alpha.2'
+        def compose_glide_version = '1.0.0-alpha.3'
         // See ReadMe from accompanist: bumping its version affect all compose platform packages
         // def accompanist_version = '0.29.1-alpha'
         def accompanist_version = '0.28.0'
@@ -39,7 +39,7 @@ buildscript {
         def rx_java_version = '3.1.6'
         def rx_android_version = '3.0.2'
 
-        def aws_s3_sdk_version = '2.64.0'
+        def aws_s3_sdk_version = '2.65.0'
         def glide_version = '4.15.0'
         def zxing_version = '3.5.1'
         def gson_version = '2.10.1'
