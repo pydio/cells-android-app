@@ -65,6 +65,7 @@ buildscript {
         processors = [
                 "com.github.bumptech.glide:compiler:$glide_version",
         ]
+
         libraries = [
                 // Kotlin standard library and coroutines
                 "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
