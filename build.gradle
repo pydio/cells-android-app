@@ -17,9 +17,6 @@ buildscript {
         def androidx_core_version = '1.9.0'
         def preference_version = '1.2.0'
         def navigation_version = '2.5.3'
-//        def constraint_layout_version = '2.1.4'
-//        def swipe_refresh_layout_version = '1.1.0'
-//        def recyclerview_selection_version = '1.1.0'
         def splash_version = '1.0.0'
 
         def material_version = '1.8.0'
@@ -27,15 +24,12 @@ buildscript {
         // Compose versions is defined via platform BOM
         // We define here the versions of a few extra libraries that extend the Jetpack Compose features
         def compose_nav_version = '2.5.3'
-        def compose_koin_version = '3.4.2'
+        def compose_koin_version = '3.4.3'
         def compose_glide_version = '1.0.0-alpha.3'
-        // See ReadMe from accompanist: bumping its version affect all compose platform packages
-        // def accompanist_version = '0.29.1-alpha'
-        def accompanist_version = '0.28.0'
 
         // Define All non-Android Third Party versions in a single place
-        def koin_version = '3.3.3'
-        def koin_android_version = '3.3.3'
+        def koin_version = '3.4.0'
+        def koin_android_version = '3.4.0'
         def rx_java_version = '3.1.6'
         def rx_android_version = '3.0.2'
 
@@ -76,18 +70,13 @@ buildscript {
                 "androidx.core:core:$androidx_core_version",
                 "androidx.appcompat:appcompat:$appcompat_version",
                 // Navigation UI
-//                "androidx.navigation:navigation-fragment-ktx:$navigation_version",
                 "androidx.navigation:navigation-ui-ktx:$navigation_version",
-//                "androidx.navigation:navigation-dynamic-features-fragment:$navigation_version",
                 // ViewModel and LiveData
                 "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version",
                 "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version",
                 // Preferences library
                 "androidx.preference:preference:$preference_version",
                 // Extended UI features
-//                "androidx.recyclerview:recyclerview-selection:$recyclerview_selection_version",
-//                "androidx.constraintlayout:constraintlayout:$constraint_layout_version",
-//                "androidx.swiperefreshlayout:swiperefreshlayout:$swipe_refresh_layout_version",
                 "androidx.core:core-splashscreen:$splash_version",
 
                 // Material UI
@@ -151,7 +140,7 @@ buildscript {
                 // See e.g: https://developer.android.com/codelabs/jetpack-compose-migration?hl=en#10
                 // "com.google.accompanist:accompanist-themeadapter-material:$accompanist_version",
                 // It also provides the basis for the carousel
-                "com.google.accompanist:accompanist-pager:$accompanist_version",
+                //  "com.google.accompanist:accompanist-pager:$accompanist_version",
         ]
 
         testLibraries = [
