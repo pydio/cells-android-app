@@ -96,8 +96,8 @@ buildscript {
                 "io.insert-koin:koin-androidx-navigation:$koin_android_version",
 
                 // RxJava 3: reactive and observable custom objects 
-                "io.reactivex.rxjava3:rxjava:$rx_java_version",
-                "io.reactivex.rxjava3:rxandroid:$rx_android_version",
+//                "io.reactivex.rxjava3:rxjava:$rx_java_version",
+//                "io.reactivex.rxjava3:rxandroid:$rx_android_version",
 
                 // Files
                 "com.amazonaws:aws-android-sdk-s3:$aws_s3_sdk_version",
