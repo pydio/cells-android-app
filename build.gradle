@@ -5,7 +5,7 @@ buildscript {
     ext {
         // Global variables: build plugins
         kotlin_version = '1.8.20'
-        gradle_build_tools_version = '8.0.0'
+        gradle_build_tools_version = '8.0.1'
 
         // Local variables (use def)
         def lifecycle_version = '2.6.1'
@@ -30,10 +30,8 @@ buildscript {
         // Define All non-Android Third Party versions in a single place
         def koin_version = '3.4.0'
         def koin_android_version = '3.4.0'
-//        def rx_java_version = '3.1.6'
-//        def rx_android_version = '3.0.2'
 
-        def aws_s3_sdk_version = '2.66.0'
+        def aws_s3_sdk_version = '2.68.0'
         def glide_version = '4.15.1'
         def zxing_version = '3.5.1'
         def gson_version = '2.10.1'
@@ -94,10 +92,6 @@ buildscript {
                 "io.insert-koin:koin-androidx-workmanager:$koin_android_version",
                 // Navigation Graph
                 "io.insert-koin:koin-androidx-navigation:$koin_android_version",
-
-                // RxJava 3: reactive and observable custom objects 
-//                "io.reactivex.rxjava3:rxjava:$rx_java_version",
-//                "io.reactivex.rxjava3:rxandroid:$rx_android_version",
 
                 // Files
                 "com.amazonaws:aws-android-sdk-s3:$aws_s3_sdk_version",
