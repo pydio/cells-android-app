@@ -4,14 +4,14 @@ buildscript {
     // Rather implement a BOM mechanism that also takes care of having the java-sdk locally or not.
     ext {
         // Global variables: build plugins
-        kotlin_version = '1.8.20'
+        kotlin_version = '1.8.21'
         gradle_build_tools_version = '8.0.1'
 
         // Local variables (use def)
         def lifecycle_version = '2.6.1'
-        def coroutines_android_version = '1.6.4'
+        def coroutines_android_version = '1.7.0'
         def room_version = '2.5.1'
-        def work_version = '2.8.0'
+        def work_version = '2.8.1'
 
         def appcompat_version = '1.6.1'
         def androidx_core_version = '1.10.0'
@@ -19,7 +19,7 @@ buildscript {
         def navigation_version = '2.5.3'
         def splash_version = '1.0.1'
 
-        def material_version = '1.8.0'
+        def material_version = '1.9.0'
 
         // Compose versions is defined via platform BOM
         // We define here the versions of a few extra libraries that extend the Jetpack Compose features
@@ -31,7 +31,7 @@ buildscript {
         def koin_version = '3.4.0'
         def koin_android_version = '3.4.0'
 
-        def aws_s3_sdk_version = '2.68.0'
+        def aws_s3_sdk_version = '2.69.0'
         def glide_version = '4.15.1'
         def zxing_version = '3.5.1'
         def gson_version = '2.10.1'
@@ -108,15 +108,16 @@ buildscript {
         // See cells-client gradle config
         composeLibraries = [
                 "androidx.compose.runtime:runtime",
+                "androidx.compose.runtime:runtime-livedata",
                 "androidx.compose.ui:ui",
                 "androidx.compose.ui:ui-util",
+                "androidx.compose.ui:ui-tooling",
                 "androidx.compose.foundation:foundation",
                 "androidx.compose.foundation:foundation-layout",
-                "androidx.compose.material:material",
-                "androidx.compose.runtime:runtime-livedata",
-                "androidx.compose.ui:ui-tooling",
                 "androidx.compose.material3:material3",
                 "androidx.compose.material3:material3-window-size-class",
+                // We use material 3, so remove remaining code that depend on this and remove the dep.
+                "androidx.compose.material:material",
                 // This library is also provided as an API dependency by androidx.compose.material:material.
                 // We specify it explicitly so that we won't break when we finally remove material lib from
                 // the explicit dependency tree
