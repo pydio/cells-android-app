@@ -69,15 +69,14 @@ buildscript {
                 "androidx.appcompat:appcompat:$appcompat_version",
                 // Navigation UI
                 "androidx.navigation:navigation-ui-ktx:$navigation_version",
-                // ViewModel and LiveData
-//                "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version",
+                // ViewModel
                 "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version",
                 // Preferences library
                 "androidx.preference:preference:$preference_version",
                 // Extended UI features
                 "androidx.core:core-splashscreen:$splash_version",
 
-                // Material UI
+                // Material UI => we still need this to build custom palette based on remote server custom primary color
                 "com.google.android.material:material:$material_version",
 
                 // Room for database, work for background
@@ -108,7 +107,6 @@ buildscript {
         // See cells-client gradle config
         composeLibraries = [
                 "androidx.compose.runtime:runtime",
-//                "androidx.compose.runtime:runtime-livedata",
                 "androidx.compose.ui:ui",
                 "androidx.compose.ui:ui-util",
                 "androidx.compose.ui:ui-tooling",
@@ -131,11 +129,6 @@ buildscript {
                 "androidx.navigation:navigation-compose:$compose_nav_version",
                 "io.insert-koin:koin-androidx-compose:$compose_koin_version",
                 "com.github.bumptech.glide:compose:$compose_glide_version",
-                // this enable cohabitation of old and new theme for compose,
-                // See e.g: https://developer.android.com/codelabs/jetpack-compose-migration?hl=en#10
-                // "com.google.accompanist:accompanist-themeadapter-material:$accompanist_version",
-                // It also provides the basis for the carousel
-                //  "com.google.accompanist:accompanist-pager:$accompanist_version",
         ]
 
         testLibraries = [
@@ -191,7 +184,6 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:$gradle_build_tools_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.21"
-//        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$safe_args_plugin_version"
     }
 }
 
