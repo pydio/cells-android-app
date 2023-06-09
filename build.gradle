@@ -24,14 +24,14 @@ buildscript {
         // Compose versions is defined via platform BOM
         // We define here the versions of a few extra libraries that extend the Jetpack Compose features
         def compose_nav_version = '2.5.3'
-        def compose_koin_version = '3.4.4'
         def compose_glide_version = '1.0.0-alpha.3'
 
         // Define All non-Android Third Party versions in a single place
-        def koin_version = '3.4.0'
-        def koin_android_version = '3.4.0'
+        def koin_version = '3.4.2'
+        def koin_android_version = '3.4.2'
+        def compose_koin_version = '3.4.5'
 
-        def aws_s3_sdk_version = '2.69.0'
+        def aws_s3_sdk_version = '2.71.0'
         def glide_version = '4.15.1'
         def zxing_version = '3.5.1'
         def gson_version = '2.10.1'
