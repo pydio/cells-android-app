@@ -28,6 +28,7 @@ buildscript {
 
         // Define All non-Android Third Party versions in a single place
         def koin_version = '3.4.2'
+        def koin_test_version = '3.4.1'
         def koin_android_version = '3.4.2'
         def compose_koin_version = '3.4.5'
 
@@ -142,8 +143,8 @@ buildscript {
                 "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_android_version",
 
                 // Dependency injection with Koin
-                "io.insert-koin:koin-test:$koin_version",
-                "io.insert-koin:koin-test-junit4:$koin_version",
+                "io.insert-koin:koin-test:$koin_test_version",
+                "io.insert-koin:koin-test-junit4:$koin_test_version",
 
                 // Mocks
                 "org.mockito:mockito-core:$mockito_version",
@@ -154,8 +155,8 @@ buildscript {
         androidTestLibraries = [
                 // Koin for Test + JUnit 4
                 "junit:junit:$junit_version",
-                "io.insert-koin:koin-test:$koin_version",
-                "io.insert-koin:koin-test-junit4:$koin_version",
+                "io.insert-koin:koin-test:$koin_test_version",
+                "io.insert-koin:koin-test-junit4:$koin_test_version",
 
                 //  Androidx Testing
                 "androidx.arch.core:core-testing:$androidx_core_testing_version",
@@ -183,7 +184,7 @@ buildscript {
 
     dependencies {
         classpath "com.android.tools.build:gradle:$gradle_build_tools_version"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.21"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
