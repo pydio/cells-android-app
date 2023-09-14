@@ -27,10 +27,10 @@ buildscript {
         def compose_glide_version = '1.0.0-alpha.6'
 
         // Define All non-Android Third Party versions in a single place
-        def koin_version = '3.4.3'
-        def koin_android_version = '3.4.3'
-        def compose_koin_version = '3.4.5'
-        def koin_test_version = '3.4.3'
+        def koin_version = '3.5.0'
+        def koin_android_version = '3.5.0'
+        def compose_koin_version = '3.5.0'
+        def koin_test_version = '3.5.0'
 
         def aws_s3_sdk_version = '2.73.0'
         def glide_version = '4.16.0'
