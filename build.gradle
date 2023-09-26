@@ -52,6 +52,8 @@ buildscript {
         // Define dependency packages that are then used as shortcuts by the various modules.
         librariesKapt = [
                 "androidx.room:room-compiler:$room_version",
+                // Might be a lead to follow to fix the warning seen at build time.
+                // "androidx.room:room-runtime:$room_version",
                 "com.github.bumptech.glide:compiler:$glide_version",
         ]
 
