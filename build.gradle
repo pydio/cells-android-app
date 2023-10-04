@@ -24,7 +24,7 @@ buildscript {
         // We define here the versions of a few extra libraries that extend the Jetpack Compose features
         def navigation_version = '2.7.3'
         def compose_nav_version = '2.7.3'
-        def compose_glide_version = '1.0.0-alpha.6'
+        def compose_glide_version = '1.0.0-beta01'
 
         // Define All non-Android Third Party versions in a single place
         def koin_version = '3.5.0'
