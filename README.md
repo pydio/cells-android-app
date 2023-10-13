@@ -3,11 +3,11 @@
 The Cells application for Android is a light client for the [Pydio Cells](https://pydio.com)
 server that provides basic features to simply access and manage your files on your Android device.  
 It supports both Cells (v2 to v4) and the legacy Pydio PHP (Pydio 6, 7 and 8) servers.  
-We also support Android devices back until Lollipop (Android 5, API 21).
+We also support Android devices back until Nougat (Android 7, API 24).
 
 Current repository is intended for **developers** and/or hackers.  
 It provides a vanilla packaging of necessary modules to simply clone and build the application, e.g
-in Android Studio Electric Eel (2022.1).
+in Android Studio Giraffe (2022.3).
 
 If you are a user, rather refer to
 the [main Android Client repository](https://github.com/pydio/cells-android-client) or directly to
@@ -41,7 +41,8 @@ vi local.properties
 
 ## Code architecture
 
-- The corner stone of the app is in the `cells-client` folder that is maintained in [its own repository](https://github.com/pydio/cells-android-client)
+- The corner stone of the app is in the `cells-client` folder that is maintained
+  in [its own repository](https://github.com/pydio/cells-android-client)
 - The `sdk-java` adds a [thin layer](https://github.com/pydio/cells-sdk-java) above the generated
   swagger generated code and provides a unified API to communicate with Cells but also with legacy
   Pydio PHP servers. It has a business friendly Apache 2 license and can directly be used from Java
