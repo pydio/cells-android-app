@@ -26,10 +26,10 @@ buildscript {
         def compose_nav_version = '2.7.4'
 
         // Define All non-Android Third Party versions in a single place
-        def koin_version = '3.5.0'
-        def koin_android_version = '3.5.0'
-        def compose_koin_version = '3.5.0'
-        def koin_test_version = '3.5.0'
+//        def koin_version = '3.5.1'
+//        def koin_android_version = '3.5.1'
+//        def compose_koin_version = '3.5.1'
+//        def koin_test_version = '3.5.1'
 
         def aws_s3_sdk_version = '2.73.0'
         def glide_version = '5.0.0-rc01'
@@ -86,14 +86,21 @@ buildscript {
                 "androidx.room:room-ktx:$room_version",
                 "androidx.work:work-runtime-ktx:$work_version",
 
+//                // Dependency injection with Koin https://insert-koin.io/
+//                "io.insert-koin:koin-core:$koin_version",
+//                // Koin main features for Android
+//                "io.insert-koin:koin-android:$koin_android_version",
+//                // Jetpack WorkManager
+//                "io.insert-koin:koin-androidx-workmanager:$koin_android_version",
+//                // Navigation Graph
+//                "io.insert-koin:koin-androidx-navigation:$koin_android_version",
+
                 // Dependency injection with Koin https://insert-koin.io/
-                "io.insert-koin:koin-core:$koin_version",
-                // Koin main features for Android
-                "io.insert-koin:koin-android:$koin_android_version",
-                // Jetpack WorkManager
-                "io.insert-koin:koin-androidx-workmanager:$koin_android_version",
-                // Navigation Graph
-                "io.insert-koin:koin-androidx-navigation:$koin_android_version",
+                // We now use the Koin BOM
+                "io.insert-koin:koin-core",
+                "io.insert-koin:koin-android",
+                "io.insert-koin:koin-androidx-workmanager",
+                "io.insert-koin:koin-androidx-navigation",
 
                 // Files
                 "com.amazonaws:aws-android-sdk-s3:$aws_s3_sdk_version",
@@ -130,8 +137,9 @@ buildscript {
 
                 // Include extensions the permits integration of Compose with extra TP libraries
                 "androidx.navigation:navigation-compose:$compose_nav_version",
-                "io.insert-koin:koin-androidx-compose:$compose_koin_version",
                 "com.github.bumptech.glide:compose:$compose_glide_version",
+//                "io.insert-koin:koin-androidx-compose:$compose_koin_version",
+                "io.insert-koin:koin-androidx-compose",
         ]
 
         testLibraries = [
@@ -145,8 +153,10 @@ buildscript {
                 "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_android_version",
 
                 // Dependency injection with Koin
-                "io.insert-koin:koin-test:$koin_test_version",
-                "io.insert-koin:koin-test-junit4:$koin_test_version",
+//                "io.insert-koin:koin-test:$koin_test_version",
+//                "io.insert-koin:koin-test-junit4:$koin_test_version",
+                "io.insert-koin:koin-test",
+                "io.insert-koin:koin-test-junit4",
 
                 // Mocks
                 "org.mockito:mockito-core:$mockito_version",
@@ -157,8 +167,10 @@ buildscript {
         androidTestLibraries = [
                 // Koin for Test + JUnit 4
                 "junit:junit:$junit_version",
-                "io.insert-koin:koin-test:$koin_test_version",
-                "io.insert-koin:koin-test-junit4:$koin_test_version",
+//                "io.insert-koin:koin-test:$koin_test_version",
+//                "io.insert-koin:koin-test-junit4:$koin_test_version",
+//                "io.insert-koin:koin-test",
+//                "io.insert-koin:koin-test-junit4",
 
                 //  Androidx Testing
                 "androidx.arch.core:core-testing:$androidx_core_testing_version",
