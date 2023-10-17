@@ -169,8 +169,8 @@ buildscript {
                 "junit:junit:$junit_version",
 //                "io.insert-koin:koin-test:$koin_test_version",
 //                "io.insert-koin:koin-test-junit4:$koin_test_version",
-//                "io.insert-koin:koin-test",
-//                "io.insert-koin:koin-test-junit4",
+                "io.insert-koin:koin-test",
+                "io.insert-koin:koin-test-junit4",
 
                 //  Androidx Testing
                 "androidx.arch.core:core-testing:$androidx_core_testing_version",
