@@ -18,7 +18,7 @@ buildscript {
         def preference_version = '1.2.1'
         def splash_version = '1.0.1'
 
-        def material_version = '1.9.0'
+        def material_version = '1.10.0'
 
         // Compose versions is defined via platform BOM
         // We define here the versions of a few extra libraries that extend the Jetpack Compose features
