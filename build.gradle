@@ -26,11 +26,6 @@ buildscript {
         def compose_nav_version = '2.7.4'
 
         // Define All non-Android Third Party versions in a single place
-//        def koin_version = '3.5.1'
-//        def koin_android_version = '3.5.1'
-//        def compose_koin_version = '3.5.1'
-//        def koin_test_version = '3.5.1'
-
         def aws_s3_sdk_version = '2.73.0'
         def glide_version = '5.0.0-rc01'
         def compose_glide_version = '1.0.0-beta01'
@@ -74,9 +69,8 @@ buildscript {
                 "androidx.navigation:navigation-ui-ktx:$navigation_version",
                 // ViewModel
                 "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version",
-                // Preferences library
+                // Extended UI features: prefs and splash screen
                 "androidx.preference:preference:$preference_version",
-                // Extended UI features
                 "androidx.core:core-splashscreen:$splash_version",
 
                 // Material UI => we still need this to build custom palette based on remote server custom primary color
@@ -85,15 +79,6 @@ buildscript {
                 // Room for database, work for background
                 "androidx.room:room-ktx:$room_version",
                 "androidx.work:work-runtime-ktx:$work_version",
-
-//                // Dependency injection with Koin https://insert-koin.io/
-//                "io.insert-koin:koin-core:$koin_version",
-//                // Koin main features for Android
-//                "io.insert-koin:koin-android:$koin_android_version",
-//                // Jetpack WorkManager
-//                "io.insert-koin:koin-androidx-workmanager:$koin_android_version",
-//                // Navigation Graph
-//                "io.insert-koin:koin-androidx-navigation:$koin_android_version",
 
                 // Dependency injection with Koin https://insert-koin.io/
                 // We now use the Koin BOM
