@@ -4,8 +4,8 @@ buildscript {
     // Rather implement a BOM mechanism that also takes care of having the java-sdk locally or not.
     ext {
         // Global variables: build plugins
-        kotlin_version = '1.9.10'
-        gradle_build_tools_version = '8.1.2'
+        kotlin_version = '1.9.20'
+        gradle_build_tools_version = '8.1.3'
 
         // Local variables (use def)
         def lifecycle_version = '2.6.2'
