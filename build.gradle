@@ -128,32 +128,24 @@ buildscript {
         ]
 
         testLibraries = [
+                "androidx.arch.core:core-testing:$androidx_core_testing_version",
                 // Junit 4
                 "junit:junit:$junit_version",
-
                 // Assertions
                 "com.google.truth:truth:$truth_version",
-
                 // Coroutines testing
                 "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_android_version",
-
                 // Dependency injection with Koin
-//                "io.insert-koin:koin-test:$koin_test_version",
-//                "io.insert-koin:koin-test-junit4:$koin_test_version",
                 "io.insert-koin:koin-test",
                 "io.insert-koin:koin-test-junit4",
-
                 // Mocks
                 "org.mockito:mockito-core:$mockito_version",
 
-                "androidx.arch.core:core-testing:$androidx_core_testing_version",
         ]
 
         androidTestLibraries = [
                 // Koin for Test + JUnit 4
                 "junit:junit:$junit_version",
-//                "io.insert-koin:koin-test:$koin_test_version",
-//                "io.insert-koin:koin-test-junit4:$koin_test_version",
                 "io.insert-koin:koin-test",
                 "io.insert-koin:koin-test-junit4",
 

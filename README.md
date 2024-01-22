@@ -7,7 +7,7 @@ We also support Android devices back until Nougat (Android 7, API 24).
 
 Current repository is intended for **developers** and/or hackers.  
 It provides a vanilla packaging of necessary modules to simply clone and build the application, e.g
-in Android Studio Giraffe (2022.3).
+in Android Studio Hedgehog (2023.1).
 
 If you are a user, rather refer to
 the [main Android Client repository](https://github.com/pydio/cells-android-client) or directly to
@@ -52,4 +52,4 @@ vi local.properties
 
 This project is licensed under the GNU GPL V3 License - see the LICENSE file for details.
 
-Copyright 2023 Abstrium SAS.
+Copyright 2024 Abstrium SAS.
