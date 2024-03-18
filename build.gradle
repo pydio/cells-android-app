@@ -31,7 +31,7 @@ buildscript {
         def compose_glide_version = '1.0.0-beta01'
         def zxing_version = '3.5.2'
         def gson_version = '2.10.1'
-        def commons_codec_version = '1.16.0'
+        def commons_codec_version = '1.16.1'
 
         // Test libraries
         def junit_version = '4.13.2'
