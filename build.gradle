@@ -4,40 +4,40 @@ buildscript {
     // Rather implement a BOM mechanism that also takes care of having the java-sdk locally or not.
     ext {
         // Global variables: build plugins
-        kotlin_version = '1.9.22'
-        gradle_build_tools_version = '8.3.1'
+        kotlin_version = '1.9.23'
+        gradle_build_tools_version = '8.3.2'
 
         // Local variables (use def)
-        def lifecycle_version = '2.6.2'
-        def coroutines_android_version = '1.7.3'
+        def lifecycle_version = '2.7.0'
+        def coroutines_android_version = '1.8.1'
         def room_version = '2.6.1'
         def work_version = '2.9.0'
 
         def appcompat_version = '1.6.1'
-        def androidx_core_version = '1.12.0'
+        def androidx_core_version = '1.13.1'
         def preference_version = '1.2.1'
         def splash_version = '1.0.1'
 
-        def material_version = '1.11.0'
+        def material_version = '1.12.0'
 
         // Compose versions is defined via platform BOM
         // We define here the versions of a few extra libraries that extend the Jetpack Compose features
-        def navigation_version = '2.7.6'
-        def compose_nav_version = '2.7.6'
+        def navigation_version = '2.7.7'
+        def compose_nav_version = '2.7.7'
 
         // Define All non-Android Third Party versions in a single place
-        def aws_s3_sdk_version = '2.74.0'
+        def aws_s3_sdk_version = '2.75.0'
         def glide_version = '5.0.0-rc01'
         def compose_glide_version = '1.0.0-beta01'
-        def zxing_version = '3.5.2'
+        def zxing_version = '3.5.3'
         def gson_version = '2.10.1'
-        def commons_codec_version = '1.16.1'
+        def commons_codec_version = '1.17.0'
 
         // Test libraries
         def junit_version = '4.13.2'
-        def truth_version = '1.2.0'
-        def robolectric_version = '4.11.1'
-        def mockito_version = '5.1.1'
+        def truth_version = '1.4.2'
+        def robolectric_version = '4.12.1'
+        def mockito_version = '5.12.0'
         def androidx_core_testing_version = '2.2.0'
         def androidx_test_version = '1.5.0'
         def androidx_test_runner_version = '1.5.2'
