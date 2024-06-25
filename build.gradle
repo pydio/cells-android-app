@@ -5,7 +5,7 @@ buildscript {
     ext {
         // Global variables: build plugins
         kotlin_version = '1.9.23'
-        gradle_build_tools_version = '8.3.2'
+        gradle_build_tools_version = '8.5.0'
 
         // Local variables (use def)
         def lifecycle_version = '2.7.0'
