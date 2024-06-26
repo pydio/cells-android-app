@@ -5,7 +5,6 @@ buildscript {
     // https://developer.android.com/build/migrate-to-catalogs
 
     repositories {
-        gradlePluginPortal()
         google()
         mavenCentral()
     }
@@ -17,14 +16,31 @@ buildscript {
 }
 
 plugins {
-    // alias libs.plugins.kotlin.android apply false
-    alias libs.plugins.ksp.devtools apply false
+    // id "com.android.application" version "8.5.0" apply false
     alias libs.plugins.android.application apply false
+
+    // id "com.google.devtools.ksp" version "2.0.0-1.0.22" apply false
+    alias libs.plugins.ksp.devtools apply false
+
+    // id "org.jetbrains.kotlin.android" version "2.0.0" apply false
+    alias libs.plugins.kotlin.android apply false
+
+    // id "org.jetbrains.kotlin.plugin.compose" version "2.0.0" apply false
     alias libs.plugins.kotlin.plugin.compose apply false
-    alias libs.plugins.androidx.room apply false
+
+    // id "androidx.room" version "2.6.1" apply false
+    //    alias libs.plugins.androidx.room apply false
 
     // Publish the generated resources as Maven Artifacts.
-    id 'maven-publish'
+    //    id 'maven-publish'
+}
+
+allprojects {
+    repositories {
+        mavenLocal()
+        google()
+        mavenCentral()
+    }
 }
 
 // Retrieve local context
@@ -48,14 +64,6 @@ ext {
 
     // Shortcut to enable building the Android layers without checking out the sdk-java repository
     useLocalSdkJava = sdkJavaCheck.exists()
-}
-
-allprojects {
-    repositories {
-        mavenLocal()
-        google()
-        mavenCentral()
-    }
 }
 
 /* Factorise some of the methods used in various sub projects */

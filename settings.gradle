@@ -1,11 +1,11 @@
-/* Insure the name stays constants, even if the root directory name changes */
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
 
-//pluginManagement {
-//    repositories {
-//        google()
-//        mavenCentral()
-//    }
-//}
 rootProject.name = 'cells-android-app'
 rootProject.buildFileName = 'build.gradle'
 
