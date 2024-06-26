@@ -1,13 +1,20 @@
 /* Insure the name stays constants, even if the root directory name changes */
+
+//pluginManagement {
+//    repositories {
+//        google()
+//        mavenCentral()
+//    }
+//}
 rootProject.name = 'cells-android-app'
 rootProject.buildFileName = 'build.gradle'
 
-def timestamp = new Date().format( 'yyyyMMddHHmm' )
+def timestamp = new Date().format('yyyyMMddHHmm')
 println('[DEBUG] Starting init phase for ' + rootProject.name + ' at ' + timestamp)
 
 // Enable having the java sdk in the same android project via git submodule
-def sdkJavaCheck = new File( 'sdk-java/sdk-java.gradle' )
-if( sdkJavaCheck.exists() ) {
+def sdkJavaCheck = new File('sdk-java/build.gradle')
+if (sdkJavaCheck.exists()) {
     include ':sdk-java'
 } else {
     println('[WARNING] Could not find local Java SDK')
@@ -16,6 +23,6 @@ if( sdkJavaCheck.exists() ) {
 include ':cells-client'
 
 /* Use custom names for the "build.gradle" file of child modules */
-rootProject.children.each {
-    it.buildFileName = it.name + '.gradle'
-}
+//rootProject.children.each {
+//   it.buildFileName = it.name + '.gradle'
+// }
