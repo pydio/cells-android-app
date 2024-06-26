@@ -1,0 +1,139 @@
+[versions]
+
+koin-bom-version = "3.5.6"
+
+compose-bom-version = "2024.06.00"
+compose-version = "1.0.0-beta01"
+
+appcompat = "1.7.0"
+aws-android-sdk-s3-version = "2.75.0"
+commons-codec = "1.17.0"
+core-splashscreen-version = "1.0.1"
+core-version = "1.13.1"
+datastore-preferences-version = "1.1.1"
+
+glide = "5.0.0-rc01"
+glide-compiler-version = "5.0.0-rc01"
+
+gson = "2.10.1"
+junit = "4.13.2"
+kotlin-stdlib-version = "1.9.23"
+kotlin-version = "1.9.23"
+gradle-build-tools-version = "8.5.0"
+
+# Local variables
+kotlinx-coroutines-test-version = "1.8.1"
+lifecycle-version = '2.7.0'
+coroutines-android-version = "1.8.1"
+lifecycle-viewmodel-ktx-version = "2.7.0"
+material = "1.12.0"
+navigation-compose-version = "2.7.7"
+navigation-ui-ktx-version = "2.7.7"
+palette-ktx-version = "1.0.0"
+preference = "1.2.1"
+room-runtime-version = "2.6.1"
+room-version = "2.6.1"
+work-runtime-ktx-version = "2.9.0"
+work-version = "2.9.0"
+
+appcompat-version = "1.6.1"
+androidx-core-version = "1.13.1"
+preference-version = "1.2.1"
+splash-version = "1.0.1"
+
+material-version = "1.12.0"
+
+# Compose versions is defined via platform BOM
+# We define here the versions of a few extra libraries that extend the Jetpack Compose features
+navigation-version = "2.7.7"
+compose-nav-version = "2.7.7"
+
+# Define All non-Android Third Party versions in a single place
+aws-s3-sdk-version = "2.75.0"
+glide-version = "5.0.0-rc01"
+glide-compose-version = "1.0.0-beta01"
+zxing-version = "3.5.3"
+gson-version = "2.10.1"
+commons-codec-version = "1.17.0"
+
+# Test libraries
+junit-version = "4.13.2"
+truth-version = "1.4.2"
+robolectric-version = "4.12.1"
+mockito-version = "5.12.0"
+androidx-core-testing-version = "2.2.0"
+androidx-test-version = "1.5.0"
+androidx-test-runner-version = "1.5.2"
+androidx-test-ext-version = "1.1.5"
+espresso-version = "3.5.1"
+junit-ktx-version = "1.2.0"
+
+
+[libraries]
+
+androidx-foundation = { module = "androidx.compose.foundation:foundation" }
+androidx-foundation-layout = { module = "androidx.compose.foundation:foundation-layout" }
+androidx-material = { module = "androidx.compose.material:material" }
+androidx-material-icons-core = { module = "androidx.compose.material:material-icons-core" }
+androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
+androidx-material3 = { module = "androidx.compose.material3:material3" }
+androidx-material3-windowsizeclass = { module = "androidx.compose.material3:material3-window-size-class" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation-compose-version" }
+androidx-runtime = { module = "androidx.compose.runtime:runtime" }
+androidx-ui = { module = "androidx.compose.ui:ui" }
+androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+androidx-ui-util = { module = "androidx.compose.ui:ui-util" }
+aws-android-sdk-s3 = { module = "com.amazonaws:aws-android-sdk-s3", version.ref = "aws-android-sdk-s3-version" }
+commons-codec = { module = "commons-codec:commons-codec", version.ref = "commons-codec" }
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose-bom-version" }
+
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide-version" }
+glide-compose = { module = "com.github.bumptech.glide:compose", version.ref = "glide-compose-version" }
+
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+insert-koin-koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose" }
+koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin-bom-version" }
+koin-core = { module = "io.insert-koin:koin-core" }
+koin-android = { module = "io.insert-koin:koin-android" }
+koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose" }
+koin-androidx-navigation = { module = "io.insert-koin:koin-androidx-navigation" }
+koin-androidx-workmanager = { module = "io.insert-koin:koin-androidx-workmanager" }
+
+
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+androidx-core = { module = "androidx.core:core", version.ref = "core-version" }
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "core-splashscreen-version" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle-viewmodel-ktx-version" }
+androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation-ui-ktx-version" }
+androidx-preference = { module = "androidx.preference:preference", version.ref = "preference" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room-runtime-version" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room-runtime-version" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room-runtime-version" }
+androidx-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "work-runtime-ktx-version" }
+glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide-compiler-version" }
+
+
+# Extra libraries
+koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin-bom-version" }
+koin-test-junit4 = { module = "io.insert-koin:koin-test-junit4", version.ref = "koin-bom-version" }
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin-stdlib-version" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx-coroutines-test-version" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines-test-version" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines-test-version" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+palette-ktx = { module = "androidx.palette:palette-ktx", version.ref = "palette-ktx-version" }
+datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore-preferences-version" }
+
+# QRCode generation
+zxing = { group = "com.google.zxing", name = "core", version.ref = "zxing-version" }
+
+# Tests
+junit = { module = "junit:junit", version.ref = "junit" }
+androidx-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-test-ext-version" }  # Check for the latest version
+espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso-version" }
+androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junit-ktx-version" }  # Optional, for UI tests
+#espresso-contrib = { module = "androidx.test.espresso:espresso-contrib", version.ref = "espresso-version" }  # Optional, for UI tests
+#espresso-intents = { module = "androidx.test.espresso:espresso-intents", version.ref = "espresso-version" }  # Optional, for UI tests
+
+
+[plugins]

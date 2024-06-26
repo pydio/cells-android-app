@@ -33,139 +33,144 @@ buildscript {
         def gson_version = '2.10.1'
         def commons_codec_version = '1.17.0'
 
-        // Test libraries
-        def junit_version = '4.13.2'
-        def truth_version = '1.4.2'
-        def robolectric_version = '4.12.1'
-        def mockito_version = '5.12.0'
-        def androidx_core_testing_version = '2.2.0'
-        def androidx_test_version = '1.5.0'
-        def androidx_test_runner_version = '1.5.2'
-        def androidx_test_ext_version = '1.1.5'
-        def espresso_version = '3.5.1'
+//        // Test libraries
+//        def junit_version = '4.13.2'
+//        def truth_version = '1.4.2'
+//        def robolectric_version = '4.12.1'
+//        def mockito_version = '5.12.0'
+//        def androidx_core_testing_version = '2.2.0'
+//        def androidx_test_version = '1.5.0'
+//        def androidx_test_runner_version = '1.5.2'
+//        def androidx_test_ext_version = '1.1.5'
+//        def espresso_version = '3.5.1'
 
         // Define dependency packages that are then used as shortcuts by the various modules.
-        librariesKapt = [
-                "androidx.room:room-compiler:$room_version",
-                // Might be a lead to follow to fix the warning seen at build time.
-                "androidx.room:room-runtime:$room_version",
-                "com.github.bumptech.glide:compiler:$glide_version",
-        ]
+//        def room_version = '2.6.1'
+//        def glide_version = '5.0.0-rc01'
 
-        processors = [
-                "com.github.bumptech.glide:compiler:$glide_version",
-        ]
+//        librariesKapt = [
+//                "androidx.room:room-compiler:$room_version",
+//                // Might be a lead to follow to fix the warning seen at build time.
+//                "androidx.room:room-runtime:$room_version",
+//                "com.github.bumptech.glide:compiler:$glide_version",
+//        ]
+//
+//        processors = [
+//                "com.github.bumptech.glide:compiler:$glide_version",
+//        ]
 
         libraries = [
                 // Kotlin standard library and coroutines
-                "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
-                "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_android_version",
-                "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_android_version",
+//                "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+//                "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_android_version",
+//                "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_android_version",
+//
+//                // Android UI and appcompat
+//                "androidx.core:core:$androidx_core_version",
+//                "androidx.appcompat:appcompat:$appcompat_version",
+//                // Navigation UI
+//                "androidx.navigation:navigation-ui-ktx:$navigation_version",
+//                // ViewModel
+//                "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version",
+//                // Extended UI features: prefs and splash screen
+//                "androidx.preference:preference:$preference_version",
+//                "androidx.core:core-splashscreen:$splash_version",
+//
+//                // Material UI => we still need this to build custom palette based on remote server custom primary color
+//                "com.google.android.material:material:$material_version",
+//
+//                // Room for database, work for background
+//                "androidx.room:room-ktx:$room_version",
+//                "androidx.work:work-runtime-ktx:$work_version",
 
-                // Android UI and appcompat
-                "androidx.core:core:$androidx_core_version",
-                "androidx.appcompat:appcompat:$appcompat_version",
-                // Navigation UI
-                "androidx.navigation:navigation-ui-ktx:$navigation_version",
-                // ViewModel
-                "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version",
-                // Extended UI features: prefs and splash screen
-                "androidx.preference:preference:$preference_version",
-                "androidx.core:core-splashscreen:$splash_version",
-
-                // Material UI => we still need this to build custom palette based on remote server custom primary color
-                "com.google.android.material:material:$material_version",
-
-                // Room for database, work for background
-                "androidx.room:room-ktx:$room_version",
-                "androidx.work:work-runtime-ktx:$work_version",
-
-                // Dependency injection with Koin https://insert-koin.io/
-                // We now use the Koin BOM
-                "io.insert-koin:koin-core",
-                "io.insert-koin:koin-android",
-                "io.insert-koin:koin-androidx-workmanager",
-                "io.insert-koin:koin-androidx-navigation",
+//                // Dependency injection with Koin https://insert-koin.io/
+//                // We now use the Koin BOM
+//                "io.insert-koin:koin-core",
+//                "io.insert-koin:koin-android",
+//                "io.insert-koin:koin-androidx-workmanager",
+//                "io.insert-koin:koin-androidx-navigation",
 
                 // Files
-                "com.amazonaws:aws-android-sdk-s3:$aws_s3_sdk_version",
-                "com.github.bumptech.glide:glide:$glide_version",
-
-                // Utils
-                "commons-codec:commons-codec:$commons_codec_version",
-                "com.google.code.gson:gson:$gson_version",
+//                "com.amazonaws:aws-android-sdk-s3:$aws_s3_sdk_version",
+//                "com.github.bumptech.glide:glide:$glide_version",
+//
+//                // Utils
+//                "commons-codec:commons-codec:$commons_codec_version",
+//                "com.google.code.gson:gson:$gson_version",
                 // QRCode generation
-                "com.google.zxing:core:$zxing_version",
+                // "com.google.zxing:core:$zxing_version",
         ]
 
         // We rely on a BOM to provide correct versions of the Jetpack Compose libraries.
         // See cells-client gradle config
         composeLibraries = [
-                "androidx.compose.runtime:runtime",
-                "androidx.compose.ui:ui",
-                "androidx.compose.ui:ui-util",
-                "androidx.compose.ui:ui-tooling",
-                "androidx.compose.foundation:foundation",
-                "androidx.compose.foundation:foundation-layout",
-                "androidx.compose.material3:material3",
-                "androidx.compose.material3:material3-window-size-class",
-                // We use material 3, so remove remaining code that depend on this and remove the dep.
-                "androidx.compose.material:material",
-                // This library is also provided as an API dependency by androidx.compose.material:material.
-                // We specify it explicitly so that we won't break when we finally remove material lib from
-                // the explicit dependency tree
-                "androidx.compose.material:material-icons-core",
-                // this separate library, the full set of Material icons. Due to the very large size of this lib,
-                // Make sure to use R8/Proguard to strip unused icons when including this as a direct dependency.
-                // See https://developer.android.com/reference/kotlin/androidx/compose/material/icons/package-summary
-                "androidx.compose.material:material-icons-extended",
-
-                // Include extensions the permits integration of Compose with extra TP libraries
-                "androidx.navigation:navigation-compose:$compose_nav_version",
-                "com.github.bumptech.glide:compose:$compose_glide_version",
-//                "io.insert-koin:koin-androidx-compose:$compose_koin_version",
-                "io.insert-koin:koin-androidx-compose",
+//                "androidx.compose.runtime:runtime",
+//                "androidx.compose.ui:ui",
+//                "androidx.compose.ui:ui-util",
+//                "androidx.compose.ui:ui-tooling",
+//                "androidx.compose.foundation:foundation",
+//                "androidx.compose.foundation:foundation-layout",
+//                "androidx.compose.material3:material3",
+//                "androidx.compose.material3:material3-window-size-class",
+//                // We use material 3, so remove remaining code that depend on this and remove the dep.
+//                "androidx.compose.material:material",
+//                // This library is also provided as an API dependency by androidx.compose.material:material.
+//                // We specify it explicitly so that we won't break when we finally remove material lib from
+//                // the explicit dependency tree
+//                "androidx.compose.material:material-icons-core",
+//                // this separate library, the full set of Material icons. Due to the very large size of this lib,
+//                // Make sure to use R8/Proguard to strip unused icons when including this as a direct dependency.
+//                // See https://developer.android.com/reference/kotlin/androidx/compose/material/icons/package-summary
+//                "androidx.compose.material:material-icons-extended",
+//
+//                // Include extensions the permits integration of Compose with extra TP libraries
+//                "androidx.navigation:navigation-compose:$compose_nav_version",
+//                "com.github.bumptech.glide:compose:$compose_glide_version",
+////                "io.insert-koin:koin-androidx-compose:$compose_koin_version",
+//                "io.insert-koin:koin-androidx-compose",
         ]
 
-        testLibraries = [
-                "androidx.arch.core:core-testing:$androidx_core_testing_version",
-                // Junit 4
-                "junit:junit:$junit_version",
-                // Assertions
-                "com.google.truth:truth:$truth_version",
-                // Coroutines testing
-                "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_android_version",
-                // Dependency injection with Koin
-                "io.insert-koin:koin-test",
-                "io.insert-koin:koin-test-junit4",
-                // Mocks
-                "org.mockito:mockito-core:$mockito_version",
 
-        ]
+//
+//        testLibraries = [
+////                "androidx.arch.core:core-testing:$androidx_core_testing_version",
+////                // Junit 4
+////                "junit:junit:$junit_version",
+////                // Assertions
+////                "com.google.truth:truth:$truth_version",
+////                // Coroutines testing
+////                "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_android_version",
+////                // Dependency injection with Koin
+////                "io.insert-koin:koin-test",
+////                "io.insert-koin:koin-test-junit4",
+////                // Mocks
+////                "org.mockito:mockito-core:$mockito_version",
+//
+//        ]
 
-        androidTestLibraries = [
-                // Koin for Test + JUnit 4
-                "junit:junit:$junit_version",
-                "io.insert-koin:koin-test",
-                "io.insert-koin:koin-test-junit4",
-
-                //  Androidx Testing
-                "androidx.arch.core:core-testing:$androidx_core_testing_version",
-                "androidx.test:runner:$androidx_test_runner_version",
-                "androidx.test:rules:$androidx_test_version",
-                "androidx.test.ext:junit:$androidx_test_ext_version",
-                "androidx.work:work-testing:$work_version",
-
-                // Coroutines testing
-                "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_android_version",
-
-                // Espresso
-                "androidx.test.espresso:espresso-core:$espresso_version",
-                "androidx.test.espresso:espresso-contrib:$espresso_version",
-                "androidx.test.espresso:espresso-intents:$espresso_version",
-
-                "org.robolectric:robolectric:$robolectric_version",
-        ]
+//        androidTestLibraries = [
+//                // Koin for Test + JUnit 4
+//                "junit:junit:$junit_version",
+//                "io.insert-koin:koin-test",
+//                "io.insert-koin:koin-test-junit4",
+//
+//                //  Androidx Testing
+//                "androidx.arch.core:core-testing:$androidx_core_testing_version",
+//                "androidx.test:runner:$androidx_test_runner_version",
+//                "androidx.test:rules:$androidx_test_version",
+//                "androidx.test.ext:junit:$androidx_test_ext_version",
+//                "androidx.work:work-testing:$work_version",
+//
+//                // Coroutines testing
+//                "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_android_version",
+//
+//                // Espresso
+//                "androidx.test.espresso:espresso-core:$espresso_version",
+//                "androidx.test.espresso:espresso-contrib:$espresso_version",
+//                "androidx.test.espresso:espresso-intents:$espresso_version",
+//
+//                "org.robolectric:robolectric:$robolectric_version",
+//        ]
     }
 
     repositories {
