@@ -1,8 +1,6 @@
 [versions]
 
 kotlin-version = "2.0.0"
-#kotlin-gradle-plugin-version = "2.0.0"
-#kotlin-stdlib-version = "2.0.0"
 ksp-devtools-version = "2.0.0-1.0.22"
 
 gradle-version = "8.5.0"
@@ -50,12 +48,12 @@ zxing-version = "3.5.3"
 
 # Test libraries
 junit-version = "4.13.2"
-androidx-test-version = "1.6.0"
+androidx-test-version = "1.6.1"
 kotlinx-coroutines-test-version = "1.8.1"
 
-androidx-test-ext-version = "1.2.0"
-espresso-version = "3.6.0"
-junit-ktx-version = "1.2.0"
+androidx-test-ext-version = "1.2.1"
+espresso-version = "3.6.1"
+junit-ktx-version = "1.2.1"
 core-ktx-version = "1.13.1"
 
 ########################### PLUGINS
@@ -144,14 +142,10 @@ androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = 
 #espresso-intents = { module = "androidx.test.espresso:espresso-intents", version.ref = "espresso-version" }  # Optional, for UI tests
 
 ########################### PLUGINS
-
 [plugins]
 
 android-application = { id = "com.android.application", version.ref = "gradle-version" }
 ksp-devtools = { id = "com.google.devtools.ksp", version.ref = "ksp-devtools-version" }
-
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin-version" }
 kotlin-plugin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin-version" }
-
 androidx-room = { id = "androidx.room", version.ref = "room-version" }
-
