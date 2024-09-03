@@ -12,7 +12,7 @@ rootProject.buildFileName = 'build.gradle'
 def timestamp = new Date().format('yyyyMMddHHmm')
 println('[DEBUG] Starting init phase for ' + rootProject.name + ' at ' + timestamp)
 
-// Enable having the java sdk in the same android project via git submodule
+// Enable having the Java SDK in the same Android project via Git submodules.
 def sdkJavaCheck = new File('sdk-java/build.gradle')
 if (sdkJavaCheck.exists()) {
     include ':sdk-java'
