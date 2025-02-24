@@ -32,8 +32,11 @@ the [application page on the Google Play store](https://play.google.com/store/ap
 ```sh
 # Don't forget the --recursive flag to also pull code of the sub-repos, mainly the Cells Client itself.
 git clone --recursive https://github.com/pydio/cells-android-app.git
-
 cd cells-android-app
+
+## If you forgot the --recursive flag, you can do this afterwards:
+git submodule update --init --recursive
+
 # Copy and adjust local.properties file
 cp local.properties.sample local.properties
 vi local.properties
