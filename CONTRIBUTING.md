@@ -1,4 +1,4 @@
-# Contributing to Pydio Cells Android Client
+# Contributing to Pydio Cells Android Application
 
 *Pydio Cells is a free and open source project and we are very glad to welcome your contribution. To make the process as seamless as possible, we recommend you read this contribution guide*.
 
