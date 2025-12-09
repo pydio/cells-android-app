@@ -3,7 +3,7 @@
 kotlin-version = "2.2.21"
 ksp-devtools-version = "2.3.0"
 
-gradle-version = "8.12.3"
+gradle-version = "8.13.1"
 
 koin-bom-version = "4.1.1"
 # Latest version can be found here: https://developer.android.com/jetpack/compose/bom
