@@ -22,8 +22,8 @@ commons-codec = "1.22.1"
 
 androidx-version = "1.19.0"
 lifecycle-viewmodel-ktx-version = "2.11.0"
-navigation-compose-version = "2.9.8"
-navigation-ui-ktx-version = "2.9.8"
+navigation-compose-version = "2.10.0"
+navigation-ui-ktx-version = "2.10.0"
 
 aws-android-sdk-s3-version = "2.81.1"
 core-splashscreen-version = "1.2.0"
